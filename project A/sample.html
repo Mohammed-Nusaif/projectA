@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>mobile app design.</title>
+		<link rel="stylesheet" type="text/css" href="style.css">
+	</head>
+	<body>
+		<div class="main">
+			<nav>
+				<div class="logo">
+					<img src="images/logo.jpg">
+				</div>
+				<div class="nav-links">
+					<ul>
+						<li><a href="Home">Home</a></li>
+						<li><a href="Phone">Phone</a></li>
+						<li><a href="Accessories">Accessories</a></li>
+						<li><a href="Cart">Cart</a></li>
+
+					</ul>
+				</div>
+			</nav>
+			<div class="information">
+				<div class="overlay"></div>
+				<img src="images/mobile.jpg" class="mobile">
+				<div id="circle">
+					<div class="features one">
+						<img src="images/diaphragm (1).png">
+						<div>
+							<h1>Camera</h1>
+							<p>12MP wide angle lens</p>
+						</div>
+					</div>
+					<div class="features two">
+						<img src="images/cpu (1).png">
+						<div>
+							<h1>Processor</h1>
+							<p>Snapdragon Octa-core 11nm</p>
+						</div>
+					</div>
+					<div class="features three">
+						<img src="images/infinity (1).png">
+						<div>
+							<h1>Display</h1>
+							<p>6.5" Mini-Drop fullscreen</p>
+						</div>
+					</div>
+					<div class="features four">
+						<img src="images/battery (1).png">
+						<div>
+							<h1>Batter Life</h1>
+							<p>5000mAh,720Hrs standby</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="controls">
+				<img src="images/up.png" id ="upBtn">
+				<h3>Features</h3>
+				<img src="images/up.png" id ="downBtn">
+			</div>
+		</div>
+		<script>
+			var circle = document.getElementById("circle");
+			var upBtn = document.getElementById("upBtn");
+			var downBtn = document.getElementById("downBtn");
+
+			var rotateValue = circle.style.transform;
+			var rotateSum;
+
+
+			upBtn.onclick =function()
+			{
+				rotateSum = rotateValue + "rotate(-90deg)";
+				circle.style.transform =rotateSum;
+				rotateValue = rotateSum;
+			}
+			downBtn.onclick =function()
+			{
+				rotateSum = rotateValue + "rotate(90deg)";
+				circle.style.transform =rotateSum;
+				rotateValue = rotateSum;
+			}
+
+		</script>
+	</body>
+</html> 
